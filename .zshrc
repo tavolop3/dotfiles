@@ -176,8 +176,8 @@ alias iconf="nvim ~/.config/i3/config"
 alias zconf="nvim ~/.zshrc"
 
 # fzf open with nvim
-bindkey -s '^F' 'nvim $(fzf --preview="cat {}")\n'
+# bindkey -s '^F' 'nvim $(fzf --preview="cat {}")\n'
 
 # zoxide
 # eval "$(zoxide init zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init --cmd cd zsh)" # hace que cd sea en relidad z
