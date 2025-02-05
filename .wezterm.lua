@@ -41,7 +41,5 @@ wezterm.on("user-var-changed", function(window, pane, name, value)
 	window:set_config_overrides(overrides)
 end)
 
-config.allow_passthrough = true
-
 -- and finally, return the configuration to wezterm
 return config
