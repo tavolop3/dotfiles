@@ -27,7 +27,7 @@ WIND_DIR=${DIR_ARRAY[WIND_DIR]}
 
 case $WEATHER_CONDITION in
   'Clouds')
-    WEATHER_ICON="  "
+    WEATHER_ICON=""
     ;;
   'Rain')
     WEATHER_ICON=" "
