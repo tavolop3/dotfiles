@@ -23,7 +23,8 @@
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 # font pango: Noto Sans Regular 10
-font pango: JetBrains Mono 10
+# font pango: Noto Sans Regular 10
+font pango: Liga SFMonoNerdFont 10
 
 # set the mod key to the winkey:
 set $mod Mod4
@@ -465,7 +466,7 @@ exec --no-startup-id /usr/bin/dunst
 # autotiling script
 # https://github.com/nwg-piotr/autotiling
 # `yay -S autotiling ;) (it is in AUR)
-exec --no-startup-id sleep 1 autotiling &
+exec --no-startup-id autotiling &
 #exec --no-startup-id krunner &
 
 # Autostart apps as you like
@@ -567,8 +568,7 @@ client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
 # Start i3bar to display a workspace bar
 # (plus the system information i3status finds out, if available)
 bar {
-		# font pango: Noto Sans Regular 10
-    font pango: JetBrains Mono 10
+		font pango: Noto Sans Regular 10
 		status_command i3blocks -c ~/.config/i3/i3blocks.conf #| python3.8 ~/programas/i3pamicstatus/i3pamicstatus.py
  
 	    	#position bottom

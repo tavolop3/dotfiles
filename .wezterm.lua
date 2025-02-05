@@ -7,10 +7,11 @@ config.warn_about_missing_glyphs = false
 config.window_decorations = "NONE"
 config.hide_tab_bar_if_only_one_tab = true
 config.font = wezterm.font_with_fallback({
-	"Liga SFMonoNerdFont",
-	"Iosevka Nerd Font",
 	"JetBrains Mono",
 })
+
+-- "Liga SFMonoNerdFont",
+-- "Iosevka Nerd Font",
 
 -- This is where you actually apply your config choices
 
