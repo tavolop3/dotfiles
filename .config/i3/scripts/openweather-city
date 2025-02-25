@@ -30,13 +30,13 @@ case $WEATHER_CONDITION in
     WEATHER_ICON=""
     ;;
   'Rain')
-    WEATHER_ICON=" "
+    WEATHER_ICON=""
     ;;
   'Snow')
-    WEATHER_ICON=" "
+    WEATHER_ICON=""
     ;;
   *)
-    WEATHER_ICON=" "
+    WEATHER_ICON=""
     ;;
 esac
 

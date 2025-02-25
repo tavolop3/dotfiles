@@ -135,6 +135,7 @@ export ASDF_DATA_DIR="$HOME/.asdf"
 # al clonar hay que cambiarle el .config/nvim a .config/nombreDistro #
 
 alias v="nvim"
+alias vg="glrnvim"
 alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
 alias nvim-kick="NVIM_APPNAME=Kickstart nvim"
 alias nvim-chad="NVIM_APPNAME=NvChad nvim"
@@ -174,6 +175,7 @@ export PATH=$ANDROID_HOME/bundle-tool:$PATH
 alias vconf="nvim ~/.config/nvim/lua/plugins/init.lua"
 alias iconf="nvim ~/.config/i3/config"
 alias zconf="nvim ~/.zshrc"
+alias tconf="nvim ~/.tmux.conf"
 
 # fzf open with nvim
 # bindkey -s '^F' 'nvim $(fzf --preview="cat {}")\n'
@@ -181,3 +183,8 @@ alias zconf="nvim ~/.zshrc"
 # zoxide
 # eval "$(zoxide init zsh)"
 eval "$(zoxide init --cmd cd zsh)" # hace que cd sea en relidad z
+
+alias n="nvim ~/notas/notes.md"
+
+PATH="$PATH":"$HOME/programas/"
+bindkey -s ^f "tmux-sessionizer.sh\n"
