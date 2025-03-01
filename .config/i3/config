@@ -290,8 +290,7 @@ bindsym $mod+F2 exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh v
 
 # mic mute toggle
 bindsym XF86AudioMicMute exec amixer sset Capture toggle
-#bindsym $mod+F3 exec amixer sset Capture toggle && dunstify -t 1000 -r 2593 -u normal "MIC $(amixer get 'Capture' | awk '/\[on\]/{print "on"}/\[off\]/{print "off"}')"
-bindsym $mod+F3 exec amixer sset Capture toggle && status=$(amixer get 'Capture' | awk '/\[on\]/{print "Microfono Activado"}/\[off\]/{print "Microfono Desactivado"}') && dunstify -t 2000 -r 2593 -u MIC $status
+bindsym $mod+F3 exec ~/programas/toggle_mic.sh
 
 # audio control
 bindsym XF86AudioPlay exec playerctl play
@@ -431,7 +430,8 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
 #exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/treesuniverse.jpg
-exec --no-startup-id feh --randomize --bg-scale /usr/share/endeavouros/backgrounds/*
+# exec --no-startup-id feh --randomize --bg-scale /usr/share/endeavouros/backgrounds/*
+exec --no-startup-id feh --randomize --bg-scale /home/tao/Pictures/backgrounds/*
 
 
 # set powersavings for display:
@@ -531,11 +531,12 @@ for_window [window_role="About"] floating enable
 for_window [class="urxvt"] border pixel 1
 
 # set size of floating window
-for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 480 #to set size of file choose dialog
-for_window [class=".*"] resize set 640 480 #to change size of all floating windows 
+# for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 480 #to set size of file choose dialog
+# for_window [class=".*"] resize set 640 480 
+#to change size of all floating windows 
 
 # set position of floating window
-for_window [class=".*"] move position center
+# for_window [class=".*"] move position center
 
 ######################################
 # color settings for bar and windows #
@@ -574,7 +575,7 @@ bar {
     font pango: SF Pro 11
     status_command i3blocks -c ~/.config/i3/i3blocks.conf
  
-	    	#position bottom
+	    	position bottom
 #	    	i3bar_command i3bar --transparency
 # it could be that you have no primary display set: set one (xrandr --output <output> --primary)
 # reference: https://i3wm.org/docs/userguide.html#_tray_output
