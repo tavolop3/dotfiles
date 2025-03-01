@@ -184,7 +184,10 @@ alias tconf="nvim ~/.tmux.conf"
 # eval "$(zoxide init zsh)"
 eval "$(zoxide init --cmd cd zsh)" # hace que cd sea en relidad z
 
-alias n="nvim ~/notas/notes.md"
+alias n="cd ~/notas/sync && nvim misc.md -c 'Telescope find_files'"
 
 PATH="$PATH":"$HOME/programas/"
 bindkey -s ^f "tmux-sessionizer.sh\n"
+
+# bat for man batman
+eval "$(batman --export-env)"
