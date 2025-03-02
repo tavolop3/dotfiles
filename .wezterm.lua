@@ -16,7 +16,7 @@ config.font = wezterm.font_with_fallback({
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
--- config.color_scheme = "AdventureTime"
+config.color_scheme = "Dracula"
 
 -- zen mode in nvim
 wezterm.on("user-var-changed", function(window, pane, name, value)
