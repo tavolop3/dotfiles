@@ -1,0 +1,18 @@
+VteTerminal,
+vte-terminal {
+  padding: 13px;
+}
+
+menu {
+  border-radius: 0px; /* Elimina esquinas redondeadas */
+  background-color: #333333; /* Fondo gris oscuro sólido */
+  border: none; /* Sin bordes adicionales */
+  padding: 0px; /* Elimina relleno que pueda mostrar bordes */
+}
+
+window#ThunarWindow menu {
+  border-radius: 0px;
+  background-color: #333333;
+  border: none;
+  padding: 0px;
+}
