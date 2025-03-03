@@ -12,6 +12,7 @@ config.font = wezterm.font_with_fallback({
 	"JetBrains Mono",
 })
 -- config.window_background_image = "/home/tao/Downloads/garga/gerez.png"
+config.window_background_opacity = 0.8
 
 -- This is where you actually apply your config choices
 

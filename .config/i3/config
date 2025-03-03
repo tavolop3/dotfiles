@@ -431,8 +431,8 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 # exec --no-startup-id sleep 2 && nitrogen --restore
 #exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/treesuniverse.jpg
 # exec --no-startup-id feh --randomize --bg-scale /usr/share/endeavouros/backgrounds/*
-exec --no-startup-id feh --randomize --bg-scale /home/tao/Pictures/backgrounds/*
-# exec --no-startup-id /home/tao/scripts/set_random_wallpaper.sh
+# exec --no-startup-id feh --randomize --bg-scale /home/tao/Pictures/backgrounds/*
+exec_always --no-startup-id wal -i ~/Pictures/backgrounds/
 
 
 # set powersavings for display:
@@ -467,7 +467,8 @@ exec --no-startup-id /usr/bin/dunst
 # autotiling script
 # https://github.com/nwg-piotr/autotiling
 # `yay -S autotiling ;) (it is in AUR)
-exec --no-startup-id autotiling &
+# exec --no-startup-id autotiling &
+exec_always --no-startup-id autotiling &
 #exec --no-startup-id krunner &
 
 # Autostart apps as you like
@@ -544,41 +545,24 @@ for_window [class="urxvt"] border pixel 1
 ######################################
 
 # Define colors variables:
-# set $darkbluetrans	#08052be6
-# set $darkblue		#08052b
-# set $lightblue		#5294e2
-# set $urgentred		#e53935
-# set $white		#ffffff
-# set $black		#000000
-# set $purple		#e345ff
-# set $darkgrey		#383c4a
-# set $grey		#b0b5bd
-# set $mediumgrey		#8b8b8b
-# set $yellowbrown	#e1b700
+set $darkbluetrans	#08052be6
+set $darkblue		#08052b
+set $lightblue		#5294e2
+set $urgentred		#e53935
+set $white		#ffffff
+set $black		#000000
+set $purple		#e345ff
+set $darkgrey		#383c4a
+set $grey		#b0b5bd
+set $mediumgrey		#8b8b8b
+set $yellowbrown	#e1b700
 
 # define colors for windows:
 #class		        	border		bground		text		indicator	child_border
-# client.focused		    	$lightblue	$darkblue	$white		$mediumgrey	$mediumgrey
-# client.unfocused	    	$darkblue	$darkblue	$grey		$darkgrey	$darkgrey
-# client.focused_inactive		$darkblue	$darkblue	$grey		$black		$black
-# client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
-
-# Set colors from Xresources
-# Change 'color7' and 'color2' to whatever colors you want i3 to use 
-# from the generated scheme.
-# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
-# it fails to get colors from Xresources.
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 #f0f0f0
-
-# class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg       $bg
-client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $bg
-client.urgent           $bg     $bg     $fg  $bg       $bg
-client.placeholder      $bg     $bg     $fg  $bg       $bg
-
-client.background       $bg
+client.focused		    	$lightblue	$darkblue	$white		$mediumgrey	$mediumgrey
+client.unfocused	    	$darkblue	$darkblue	$grey		$darkgrey	$darkgrey
+client.focused_inactive		$darkblue	$darkblue	$grey		$black		$black
+client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
 
 #####################################
 # Application menu handled by rofi: #
