@@ -184,7 +184,7 @@ alias tconf="nvim ~/.tmux.conf"
 # eval "$(zoxide init zsh)"
 eval "$(zoxide init --cmd cd zsh)" # hace que cd sea en relidad z
 
-alias n="cd ~/notas/sync && nvim misc.md -c 'Telescope find_files'"
+alias n="cd ~/Sync/memos/ && nvim misc.md -c 'Telescope find_files'"
 
 PATH="$PATH":"$HOME/programas/"
 bindkey -s ^f "tmux-sessionizer.sh\n"

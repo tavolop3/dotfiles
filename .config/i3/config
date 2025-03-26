@@ -195,6 +195,9 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to update i3)
 bindsym $mod+Shift+r restart
 
+# restart polybar
+bindsym $mod+Shift+b exec polybar-msg cmd restart
+
 # krunner
 # bindsym $mod+i krunner
 
@@ -250,8 +253,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-#bindsym $mod+s layout stacking
+bindsym $mod+s layout stacking
 bindsym $mod+g layout tabbed
+bindsym $mod+x layout default
 # bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -306,8 +310,10 @@ bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 ## App shortcuts
 bindsym $mod+w exec /usr/bin/google-chrome-stable
+# bindsym $mod+w exec /usr/bin/zen-browser
 bindsym $mod+n exec /usr/bin/nautilus
 bindsym $mod+e exec /usr/bin/thunar
+bindsym $mod+o exec /usr/bin/joplin-desktop
 #bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 bindsym Print exec xfce4-screenshooter -r -c  
 bindsym $mod+Print exec xfce4-screenshooter -r -s /home/tao/screenshots/"$(date +"%Y-%m-%d-%T").screenshot.png"
@@ -474,7 +480,8 @@ exec_always --no-startup-id autotiling &
 # Autostart apps as you like
 #exec --no-startup-id sleep 2 && xfce4-terminal
 #exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
-exec --no-startup-id sleep 5 && google-chrome-stable
+exec --no-startup-id sleep 1 && google-chrome-stable
+# exec --no-startup-id sleep 1 && zen-browser
 #exec --no-startup-id sleep 3 && thunar
 
 # kderunner process autostart
@@ -490,10 +497,10 @@ exec --no-startup-id sleep 5 && google-chrome-stable
 #exec --no-startup-id blueberry-tray
 
 # networkmanager-applet
-exec --no-startup-id nm-applet
+exec --no-startup-id sleep 1 && nm-applet
 
 # clipman-applet
-exec --no-startup-id xfce4-clipman
+exec --no-startup-id sleep 1 && xfce4-clipman
 
 ##################
 # floating rules #
@@ -575,6 +582,9 @@ client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
 ## endeavouros theme
 bindsym F9 exec rofi -modi drun -show drun -show-icons \
 		-config ~/.config/rofi/rofidmenu.rasi 
+bindsym F10 exec rofi -modi drun -show drun -show-icons \
+		-config ~/.config/rofi/rofidmenu.rasi \
+    -theme "launchpad"
 
 ## selected theme
 bindsym $mod+d exec rofi -modi drun -show drun -show-icons
@@ -594,8 +604,10 @@ bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show
 		-config ~/.config/rofi/rofidmenu.rasi
 
 # iniciar syncthing-tray
-exec --no-startup-id syncthingtray
+exec --no-startup-id sleep 5 && syncthingtray
 
 #polybar
 exec --no-startup-id polybar -r mainbar
-# exec_always --no-startup-id ~/programas/pywal-polybar.sh
+
+#btop
+bindsym $mod+Shift+m exec wezterm start btop

@@ -17,7 +17,7 @@ config.window_background_opacity = 0.8
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = "Dracula"
+-- config.color_scheme = "Dracula"
 
 -- zen mode in nvim
 wezterm.on("user-var-changed", function(window, pane, name, value)
