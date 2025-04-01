@@ -215,8 +215,8 @@ bindsym $mod+Shift+b exec polybar-msg cmd restart
 #bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_down
 # Backlight with brightnessctl (forum solution)
 #bindsym XF86MonBrightnessUp exec "brightnessctl -c backlight set +5% && notify-send "Brightness - $(brightnessctl -m | cut -d, -f 4)%""
-# bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +1% && ~/.config/i3/scripts/volume_brightness.sh brightness_up
-# bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 5%- && ~/.config/i3/scripts/volume_brightness.sh brightness_down
+bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +1% && ~/.config/i3/scripts/volume_brightness.sh brightness_up
+bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 5%- && ~/.config/i3/scripts/volume_brightness.sh brightness_down
 
 
 # change focus
