@@ -192,4 +192,8 @@ bindkey -s ^f "tmux-sessionizer.sh\n"
 # bat for man batman
 eval "$(batman --export-env)"
 
+#pywal
 wal -r && clear
+
+#rust
+. "$HOME/.cargo/env"

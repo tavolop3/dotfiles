@@ -43,5 +43,18 @@ wezterm.on("user-var-changed", function(window, pane, name, value)
 	window:set_config_overrides(overrides)
 end)
 
+wezterm.keys = {
+	{
+		key = "F",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.SendString("\x06"), -- Send Ctrl+F
+	},
+	{
+		key = "F",
+		mods = "SUPER",
+		action = wezterm.action.SendString("\x06"), -- keep win+f
+	},
+}
+
 -- and finally, return the configuration to wezterm
 return config
