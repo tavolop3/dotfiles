@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions fzf)
+plugins=(git zsh-autosuggestions) #fzf
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,8 +119,8 @@ zstyle ':completion::complete:*' gain-privileges 1
 # . /opt/asdf-vm/asdf.sh
 
 #poetry
-export PATH="/home/tao/.local/bin:$PATH"
-fpath+=~/.zfunc
+#export PATH="/home/tao/.local/bin:$PATH"
+#fpath+=~/.zfunc
 # autoload -Uz compinit && compinit
 
 #custom shortcuts para zsh
@@ -129,13 +129,12 @@ fpath+=~/.zfunc
 #zle -N buscar
 #bindkey '^F' buscar
 
-export ASDF_DATA_DIR="$HOME/.asdf"
+#export ASDF_DATA_DIR="$HOME/.asdf"
 
 # MULTIPLES CONFIGURACIONES DE NVIM https://www.youtube.com/watch?v=LkHjJlSgKZY #
 # al clonar hay que cambiarle el .config/nvim a .config/nombreDistro #
 
 alias v="nvim"
-alias vg="glrnvim"
 alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
 alias nvim-kick="NVIM_APPNAME=Kickstart nvim"
 alias nvim-chad="NVIM_APPNAME=NvChad nvim"
@@ -160,17 +159,17 @@ bindkey -s ^a "nvims\n"
 export BROWSER='/usr/bin/google-chrome-stable'
 
 ### android
-export ANDROID_HOME=$HOME/Android/Sdk
-export ANDROID_SDK_ROOT=$HOME/Android/Sdk
-export ANDROID_AVD_HOME=$HOME/.android/avd
-export PATH=$ANDROID_HOME:$PATH
-export PATH=$ANDROID_HOME/platform-tools:$PATH
-export PATH=$ANDROID_HOME/tools:$PATH
-export PATH=$ANDROID_HOME/tools/bin:$PATH
+#export ANDROID_HOME=$HOME/Android/Sdk
+#export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+#export ANDROID_AVD_HOME=$HOME/.android/avd
+#export PATH=$ANDROID_HOME:$PATH
+#export PATH=$ANDROID_HOME/platform-tools:$PATH
+#export PATH=$ANDROID_HOME/tools:$PATH
+#export PATH=$ANDROID_HOME/tools/bin:$PATH
 
-export PATH=$ANDROID_HOME/emulator:$PATH
-export PATH=$ANDROID_HOME/sources:$PATH
-export PATH=$ANDROID_HOME/bundle-tool:$PATH
+#export PATH=$ANDROID_HOME/emulator:$PATH
+#export PATH=$ANDROID_HOME/sources:$PATH
+#export PATH=$ANDROID_HOME/bundle-tool:$PATH
 
 alias vconf="nvim ~/.config/nvim/lua/plugins/init.lua"
 alias iconf="nvim ~/.config/i3/config"
@@ -193,7 +192,10 @@ bindkey -s ^f "tmux-sessionizer.sh\n"
 eval "$(batman --export-env)"
 
 #pywal
-wal -r && clear
+cat ~/.cache/wal/sequences
 
 #rust
 . "$HOME/.cargo/env"
+
+#esp-idf
+# source /opt/esp-idf/export.sh

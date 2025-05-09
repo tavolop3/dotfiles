@@ -11,6 +11,9 @@ config.font = wezterm.font_with_fallback({
 	"Iosevka Nerd Font",
 	"JetBrains Mono",
 })
+
+config.font_size = 12.0
+
 -- config.window_background_image = "/home/tao/Downloads/garga/gerez.png"
 config.window_background_opacity = 0.8
 

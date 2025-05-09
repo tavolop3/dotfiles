@@ -603,11 +603,26 @@ exec --no-startup-id greenclip daemon>/dev/null
 bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard \
 		-config ~/.config/rofi/rofidmenu.rasi
 
+#polybar
+exec --no-startup-id polybar
+
 # iniciar syncthing-tray
 exec --no-startup-id sleep 5 && syncthingtray
 
-#polybar
-exec --no-startup-id polybar -r mainbar
-
 #btop
 bindsym $mod+Shift+m exec wezterm start btop
+
+#yazi
+bindsym $mod+control+e exec wezterm start yazi
+
+#scratchpad 
+
+# Mostrar u ocultar el scratchpad (equivalente a togglespecialworkspace, magic)
+# bindsym $mod+Shift+s scratchpad show
+
+# Mover la ventana activa al scratchpad (equivalente a movetoworkspace, special:magic)
+# bindsym $mod+Control+s move scratchpad
+
+## switch to last workspace
+bindsym $mod+Control+Tab workspace back_and_forth
+
