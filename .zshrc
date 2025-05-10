@@ -192,6 +192,7 @@ bindkey -s ^f "tmux-sessionizer.sh\n"
 eval "$(batman --export-env)"
 
 #pywal
+# wal -r && clear
 cat ~/.cache/wal/sequences
 
 #rust

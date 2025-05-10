@@ -173,8 +173,8 @@ bindsym $mod+r mode "resize"
 ######################################
 
 # start a terminal
-# bindsym $mod+Return exec xfce4-terminal
-bindsym $mod+Return exec wezterm
+bindsym $mod+Return exec xfce4-terminal
+# bindsym $mod+Return exec wezterm
 
 # kill focused window
 bindsym $mod+q kill
@@ -400,7 +400,7 @@ for_window [class=google-chrome-stable] focus
 # exec_always --no-startup-id picom -b 
 #
 # for custom config:
-exec_always --no-startup-id picom --no-fading-openclose --config  ~/.config/picom.conf
+# exec_always --no-startup-id picom --no-fading-openclose --config  ~/.config/picom.conf --backend xrender
 # exec --no-startup-id picom --no-fading-openclose --config ~/.config/picom/picom.conf
 #############################################
 # autostart applications/services on login: #
@@ -437,8 +437,8 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 # exec --no-startup-id sleep 2 && nitrogen --restore
 #exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/treesuniverse.jpg
 # exec --no-startup-id feh --randomize --bg-scale /usr/share/endeavouros/backgrounds/*
-# exec --no-startup-id feh --randomize --bg-scale /home/tao/Pictures/backgrounds/*
-exec_always --no-startup-id wal -i ~/Pictures/backgrounds/
+# exec --no-startup-id feh --randomize --bg-scale /home/tao/Imágenes/backgrounds/*
+exec_always --no-startup-id wal -i ~/Imágenes/backgrounds/
 
 
 # set powersavings for display:
@@ -480,7 +480,7 @@ exec_always --no-startup-id autotiling &
 # Autostart apps as you like
 #exec --no-startup-id sleep 2 && xfce4-terminal
 #exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
-exec --no-startup-id sleep 1 && google-chrome-stable
+# exec --no-startup-id sleep 1 && google-chrome-stable
 # exec --no-startup-id sleep 1 && zen-browser
 #exec --no-startup-id sleep 3 && thunar
 
@@ -607,7 +607,7 @@ bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show
 exec --no-startup-id polybar
 
 # iniciar syncthing-tray
-exec --no-startup-id sleep 5 && syncthingtray
+# exec --no-startup-id sleep 5 && syncthingtray
 
 #btop
 bindsym $mod+Shift+m exec wezterm start btop
