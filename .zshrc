@@ -1,3 +1,10 @@
+# zmodload zsh/zprof
+
+#performance 
+DISABLE_AUTO_UPDATE="true"
+DISABLE_MAGIC_FUNCTIONS="true"
+DISABLE_COMPFIX="true"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -70,7 +77,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions) #fzf
+plugins=(
+  git
+  zsh-autosuggestions
+) #fzf
 
 source $ZSH/oh-my-zsh.sh
 
@@ -199,3 +209,12 @@ cat ~/.cache/wal/sequences
 
 #esp-idf
 # source /opt/esp-idf/export.sh
+
+#zsh-syntax-highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
+# PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+RPROMPT="%@"
+
+# zprof

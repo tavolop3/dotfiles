@@ -497,10 +497,10 @@ exec --no-startup-id sleep 1 && google-chrome-stable
 #exec --no-startup-id blueberry-tray
 
 # networkmanager-applet
-exec --no-startup-id sleep 1 && nm-applet
+exec --no-startup-id sleep 2 && nm-applet
 
 # clipman-applet
-exec --no-startup-id sleep 1 && xfce4-clipman
+exec --no-startup-id sleep 2 && xfce4-clipman
 
 ##################
 # floating rules #
@@ -604,10 +604,10 @@ bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show
 		-config ~/.config/rofi/rofidmenu.rasi
 
 #polybar
-exec --no-startup-id polybar
+exec --no-startup-id sleep 3 && polybar
 
 # iniciar syncthing-tray
-exec --no-startup-id sleep 5 && syncthingtray
+exec --no-startup-id sleep 5 && syncthingtray-qt6 --wait
 
 #btop
 bindsym $mod+Shift+m exec wezterm start btop
@@ -626,3 +626,5 @@ bindsym $mod+control+e exec wezterm start yazi
 ## switch to last workspace
 bindsym $mod+Control+Tab workspace back_and_forth
 
+#freedom academy
+exec --no-startup-id google-chrome-stable --app-id=kfmhogikjfnckdonckdaefdgaehoabdc
