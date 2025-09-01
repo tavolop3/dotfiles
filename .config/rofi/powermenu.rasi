@@ -3,7 +3,7 @@
  * Maintainer: joekamprad [joekamprad //a_t// endeavouros.com]
  *******************************************************/
 configuration {
-    font:            "Noto Sans Regular 10";
+    font:            "Red Hat Text 10";
     show-icons:      false;
     icon-theme:      "Qogir";
     scroll-method:   0;
@@ -122,3 +122,10 @@ textbox-prompt-colon {
 mainbox {
   children: [listview];
 }
+
+window {
+    width: 20%;
+    padding: 0;
+    /* Sin altura fija */
+}
+

@@ -185,6 +185,9 @@ alias vconf="nvim ~/.config/nvim/lua/plugins/init.lua"
 alias iconf="nvim ~/.config/i3/config"
 alias zconf="nvim ~/.zshrc"
 alias tconf="nvim ~/.tmux.conf"
+alias hconf="nvim ~/.config/hypr/hyprland.conf"
+
+alias ls="ls --hyperlink=auto --color=auto "$@""
 
 # fzf open with nvim
 # bindkey -s '^F' 'nvim $(fzf --preview="cat {}")\n'
@@ -202,10 +205,10 @@ bindkey -s ^f "tmux-sessionizer.sh\n"
 eval "$(batman --export-env)"
 
 #pywal
-cat ~/.cache/wal/sequences
+# cat ~/.cache/wal/sequences
 
 #rust
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 #esp-idf
 # source /opt/esp-idf/export.sh
