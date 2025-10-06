@@ -1,0 +1,57 @@
+* {
+  font-family: "Red Hat Text", "Sans-serif";
+  font-weight: 500;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+window#waybar {
+  background-color: rgba(20, 20, 20, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#clock, #cpu, #memory, #disk, #network, #pulseaudio, #pulseaudio\\#mic, #temperature, #tray {
+  padding: 0 5px;
+}
+
+
+#disk {
+  color: white;
+}
+
+#disk.critical {
+  color: red;
+}
+
+#disk.warning {
+  color: orange;
+}
+
+#disk.good {
+  color: limegreen;
+}
+
+#workspaces button {
+  padding: 0 6px;
+  border-radius: 5px;
+  color: white;
+  background: transparent;
+  transition: background 0.2s ease;
+}
+
+#workspaces button.focused {
+  background: #5e81ac; /* workspace activo */
+}
+
+#workspaces button.urgent {
+  background: red;
+  color: white;
+}
+
+#workspaces button:hover {
+  background: #444;
+}
+
+#workspaces button.visible {
+  background: #333;
+}

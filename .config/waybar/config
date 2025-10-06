@@ -1,0 +1,93 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 34,
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock#date", "clock#time"],
+  "modules-right": ["disk", "cpu", "memory", "network", "pulseaudio", "tray", "pulseaudio#mic" ],
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
+  },
+
+  "taskbar": {
+    "format": "{title}",
+    "icon-size": 16,
+    "all-outputs": true,
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "on-click-right": "minimize",
+    "tooltip-format": "{app_id} - {title}",
+    "max-length": 30
+  },
+
+  "custom/spacer": {
+    "format": " ",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
+  },
+
+  "cpu": { "format": "CPU {usage}%" },
+  "memory": { "format": "RAM {}%" },
+
+  "temperature": {
+    "hwmon-path": "/sys/class/thermal/thermal_zone0/temp",
+    "critical-threshold": 80,
+    "format": " {temperatureC}°C"
+  },
+
+  "disk": {
+    "path": "/",
+    "format": "<span color='#f1c40f'>/</span> {free}",
+    "states": {
+      "/": {
+        "warning": 10,
+        "critical": 5
+      }
+    }
+  },
+
+  "network": {
+    "format-wifi": " ",
+    "format-ethernet": "Ethernet",
+    "format-disconnected": "⚠ Sin red"
+  },
+
+  "pulseaudio": {
+    "format": "   {volume}%",
+    "on-click": "pavucontrol"
+  },
+
+  "pulseaudio#mic": {
+    "format": "{format_source}  ",
+    "format-source": "<span color='#00ff00'></span>",
+    "format-source-muted": "",
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+    "tooltip": true,
+    "interval": 1,
+    "name": "mic"
+  },
+
+  "clock#date": {
+    "format": "{:%A %d,  %B}",
+    "format-alt": "{:%m-%d}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "interval": 60
+  },
+
+  "clock#time": {
+    "timezone": "America/Argentina/Buenos_Aires",
+    "locale": "es_AR.utf8",
+    "format": "{:%H:%M:%S}",
+    "interval": 1
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8
+  }
+}
+
