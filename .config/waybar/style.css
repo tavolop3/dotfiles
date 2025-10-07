@@ -10,10 +10,17 @@ window#waybar {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-#clock, #cpu, #memory, #disk, #network, #pulseaudio, #pulseaudio\\#mic, #temperature, #tray {
+#clock,
+#cpu,
+#memory,
+#disk,
+#network,
+#pulseaudio,
+#pulseaudio\\#mic,
+#temperature,
+#tray {
   padding: 0 5px;
 }
-
 
 #disk {
   color: white;
@@ -54,4 +61,9 @@ window#waybar {
 
 #workspaces button.visible {
   background: #333;
+}
+
+#custom-notification {
+  font-family: "NotoSansMono Nerd Font";
+  padding: 6 6px;
 }
